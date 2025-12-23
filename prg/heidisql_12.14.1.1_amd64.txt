@@ -1,0 +1,30 @@
+#caso nao install - if erro
+::dpkg -i heidisql_12.14.1.1_amd64.deb 
+(Reading database ... 268679 files and directories currently installed.)
+Preparing to unpack heidisql_12.14.1.1_amd64.deb ...
+Unpacking heidisql (12.14.1.1) over (12.14.1.1) ...
+dpkg: dependency problems prevent configuration of heidisql:
+ heidisql depends on libmariadb-dev | libmysqlclient-dev; however:
+  Package libmariadb-dev is not installed.
+  Package libmysqlclient-dev is not installed.
+ heidisql depends on libpq5; however:
+  Package libpq5 is not installed.
+ heidisql depends on sqlite3; however:
+  Package sqlite3 is not installed.
+ heidisql depends on libsybdb5; however:
+  Package libsybdb5 is not installed.
+
+dpkg: error processing package heidisql (--install):
+ dependency problems - leaving unconfigured
+Processing triggers for mailcap (3.74) ...
+Processing triggers for desktop-file-utils (0.28-1) ...
+Errors were encountered while processing:
+ heidisql
+
+===resolve
+::sudo apt --fix-broken install
+
+==run again
+::dpkg -i heidisql_12.14.1.1_amd64.deb
+
+==open program install
